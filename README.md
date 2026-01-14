@@ -1,2 +1,5 @@
-# password-generator
-This is a random password generator developed with HTML, CSS, and JavaScript. It generates secure and random passwords based on user-defined parameters, such as password length and the inclusion of special characters.
+# Gerador de Senha
+Este é um gerador de senha aleatória desenvolvido com HTML, CSS e JavaScript. Ele gera senhas seguras e aleatórias com base nos parâmetros fornecidos pelo usuário, como comprimento da senha e caracteres especiais.
+
+Visualize o projeto
+
