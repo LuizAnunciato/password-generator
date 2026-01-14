@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap'); /* Fonte Roboto importada */
+
+:root { /* Criação de variáveis das cores */
+    --color-primary-1: #8BC34A;
+    --color-primary-2: #8BC34AA6;
+
+    --color-neutral-1: #f8fafc;
+    --color-neutral-2: #24232b;
+    --color-neutral-3: #13121a;
+}   
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Mono', monospace;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Altura a Div (No centro da tela)*/
+    background-color: var(--color-neutral-3);
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+#password_img /* Acessando a imagem e customizando*/ {
+    width: 100px; /*Largura de 100 pixels*/
+}
+
+#title {
+    color: var(--color-neutral-1); /* Mudar a cor do título acessando a variável criada*/
+    font-weight: 500; /* Diminuir o tamanho da fonte*/
+    margin-bottom: 10px; /* Margem para espaçamento*/
+}
+
+#signature { /* Personalizando minha assinatura do projeto - Esse sim estou fazendo solo hehe*/
+    color: var(--color-neutral-1);
+    font-weight: 300;
+    font-size: 10px;
+    opacity: 0.5;
+    transition: opacity 0.3s;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: default;
+    cursor: pointer;
+    user-select: none;
+}   
+
+    #signature:hover {
+        opacity: 1;
+        cursor: pointer;
+    }
+
+#password_container /* Container/Espaço onde vai ser gerado a senha*/{
+    width: 100%; /* Largura de 100%*/
+    max-width: 400px; /* Largura máxima */
+    display: none; /* Container vai ser em linha ou coluna? Nesse caso LINHA*/
+    justify-content: space-between;
+    align-items: center; /*Container localizado no centro*/
+    background-color: var(--color-neutral-2); /*Cor do fundo*/
+    color: var(--color-neutral-1); /*Cor da senha gerada*/
+    border-radius: 8px; /*Arredondar os cantos dos elementos*/
+    padding: 8px 18px; /*Espaçamento interno entre o conteúdo de um elemento e sua borda*/
+}
+
+#password_container.show {
+    display: flex;
+}
+
+
+#password /* Texto da senha exibido*/{
+    font-size: 14px; /*Tamanho da fonte*/
+    white-space: nowrap; /*Não quebrar a senha*/
+    overflow: hidden; /*Cortar e esconder qualquer parte do conteúdo*/
+    text-overflow: ellipsis; /* Colocar os ...*/
+}
+
+#copy /*Customizar o botão gerador da senha*/ {
+    background-color: transparent; /*Cor transparente do fundo*/
+    border: none; /* Tirar a borda*/
+    color: var(--color-primary-1); /*Cor da fonte*/
+    height: 40px; /* Altura */
+    width: 30px; /* Largura*/
+    font-size: 16px; /*Tamanho da fonte */
+    cursor: pointer; /*Ícone do mouse --> ponteiro*/
+    transition: .4s;
+}
+
+#copy:hover /* Aplicar estilos a um elemento apenas quando o usuário passa o ponteiro do mouse sobre ele*/ {
+    color: var(--color-primary-2)
+}
+
+#password_items /*Bloco de opções da senha --> Maiúscula, Minúscula etc*/ {
+    width: 400px; /*Largura*/
+    background-color: var(--color-neutral-2); /* Cor do fundo */
+    color: var(--color-neutral-1); /* Cor da letras */
+    border-radius: 8px; /*Arredondar os cantos dos elementos*/
+    display: flex; /* Container vai ser em linha ou coluna? Nesse caso LINHA --> Transforma um elemento em um "contêiner flexível*/
+    flex-direction: column; /* Organiza os itens de um contêiner verticalmente, um abaixo do outro */
+    gap: 8px; /*Espaçamento*/
+    padding: 18px; /*Espaçamento interno entre o conteúdo de um elemento e sua borda*/
+}
+
+.item {
+    display: flex;
+    align-items: center; /* Alinha verticalmente o checkbox com o texto */
+    gap: 14px; /*Espaçamento*/
+}
+
+#size {
+    width: 50px; /* Largura*/
+    text-align: center; /*Alinhar horizontalmente o conteúdo de um elemento de bloco */
+    border: none;
+    border-radius: 4px;
+}
+
+#size::-webkit-inner-spin-button,
+#size::-webkit-outer-spin-button {
+    opacity: 1;
+}
+
+#size:focus {
+    outline: 1px solid var(--color-primary-1);
+}
+
+#generate {
+    background-color: var(--color-primary-1); /* Cor do botão*/
+    border: none; /* Retirar a borda*/
+    margin-top: 12px; /* Aumentar o espaçamento */
+    padding: 10px 0px; /*Espaçamento interno entre o conteúdo de um elemento e sua borda*/
+    border-radius: 4px; /*Arredondar os cantos dos elementos*/
+    color: var(--color-neutral-3); /*Cor do texto*/
+    font-size: 16px; /* Tamanho da fonte */
+    font-weight: 500; /* Espessura ou intensidade dos traços de um texto */
+    cursor: pointer; 
+    transition: background-color .4s;
+    width: 100%;
+}
+
+#generate:hover /* Aplicar estilos a um elemento apenas quando o usuário passa o ponteiro do mouse sobre ele*/ {
+    background-color: var(--color-primary-2)
+}
