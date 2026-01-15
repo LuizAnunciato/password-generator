@@ -6,3 +6,7 @@ Este é um gerador de senha aleatória desenvolvido com HTML, CSS e JavaScript. 
 https://luizanunciato.github.io/password-generator/
 
 # Funcionalidades
+
+* Geração de senhas aleatórias com opções personalizáveis.
+* Opções para incluir letras maiúsculas, minúsculas, números e caracteres especiais.
+* Botão para copiar a senha gerada para a área de transferência.
